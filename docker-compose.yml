@@ -8,6 +8,8 @@ services:
     image: docker.io/library/alpine:3.21
     networks:
       - opi
+    command: |
+      sh -c 'sleep 20 && exit 0'
 
 networks:
   opi:
