@@ -1,7 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright (c) 2022 Dell Inc, or its subsidiaries.
 ---
-version: "3.7"
 
 services:
 
@@ -9,6 +8,8 @@ services:
     image: docker.io/library/alpine:3.21
     networks:
       - opi
+    command: |
+      sh -c 'sleep 20 && exit 0'
 
 networks:
   opi:
